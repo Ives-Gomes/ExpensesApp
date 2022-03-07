@@ -8,9 +8,21 @@ import './global.css';
 const DUMMY_EXPENSES = [
   {
     id: Math.random().toString(),
-    title: 'Bicicleta',
+    title: 'Bike',
     amount: 600,
-    date: new Date(2020, 8, 20),
+    date: new Date(2022, 8, 20),
+  },
+  {
+    id: Math.random().toString(),
+    title: 'Bottle',
+    amount: 2,
+    date: new Date(2021, 3, 14),
+  },
+  {
+    id: Math.random().toString(),
+    title: 'Cable',
+    amount: 40,
+    date: new Date(2021, 9, 5),
   },
 ];
 
