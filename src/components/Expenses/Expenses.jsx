@@ -6,7 +6,7 @@ import ExpenseItem from '../ExpenseItem/ExpenseItem';
 
 import './style.css';
 
-function Expenses() {
+function Expenses({ expenses }) {
   const [filteredYear, setFilteredYear] = useState('2022');
 
   const filterChangeHandler = (selectedYear) => {
@@ -17,16 +17,14 @@ function Expenses() {
     <Card className="expenses">
       <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
 
-      <ExpenseItem
-        date={new Date()}
-        title="Bicicleta"
-        price={600}
-      />
-      <ExpenseItem
-        date={new Date(2021, 4, 15)}
-        title="Balão"
-        price={5}
-      />
+      {expenses.map((expense) => (
+        <ExpenseItem
+          key={expense.id}
+          date={expense.date}
+          title={expense.title}
+          price={expense.amount}
+        />
+      ))}
     </Card>
   );
 }
