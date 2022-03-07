@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-import NewExpense from './components/NewExpense/NewExpense';
-import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/ExpensesComponents/NewExpense/NewExpense';
+import Expenses from './components/ExpensesComponents/Expenses/Expenses';
 
 import './global.css';
 
